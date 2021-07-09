@@ -1,0 +1,85 @@
+.home{
+    height: 95vh;
+    background-color: white;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    .h-title{
+        max-width: 50%;
+    }
+    .text{
+        max-width: 500px;
+    }
+    .btn-container{
+        display: flex;
+        align-items: center;
+    }
+    .circle{
+        position: relative;
+        svg{
+            width: 15px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: moving .6s linear infinite alternate;
+            transition: 1s all cubic-bezier(.165,.85,.45,1) 0s;
+            -moz-transition: 1s all cubic-bezier(.165,.85,.45,1) 0s;
+            -webkit-transition: 1s all cubic-bezier(.165,.85,.45,1) 0s;
+            -o-transition: 1s all cubic-bezier(.165,.85,.45,1) 0s;
+
+        }
+        &:hover{
+            svg{
+                fill: $main;
+            }
+        }
+    }
+    .editor{
+        color: $main;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        .input-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 20px;
+            background-color: $main;
+            margin-left: 8px;
+            animation: blink 9s  1s ease-out 0s infinite;
+         
+      }
+    }
+    
+    @media (max-width: 992px) {
+        margin-top: 0;
+        height: unset;
+        padding: 50px;
+     
+        display: block;
+        &>div{
+            text-align: center;
+        }
+        .h-title, .text{
+            max-width: unset;
+        }
+        .editor, .btn-container{
+            justify-content: center;
+        }
+        
+    }
+}
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+
+  @keyframes moving {
+      0%{top:30%;}
+      50%{top:40%;}
+      100%{top:30%;}
+  }

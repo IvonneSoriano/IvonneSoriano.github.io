@@ -1,0 +1,24 @@
+.aboutMe{
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: white;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    min-height: 65vh;
+    .info{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 14px;
+        font-weight: 600;
+        li{
+            display: block;
+            margin-bottom: 20px;
+            flex: 0 0 50%;
+            .title{
+                color: $main;
+            }
+        }
+    }
+}

@@ -1,0 +1,199 @@
+header {
+  background: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 0 0 50px;
+  position: fixed;
+  left: 50px;
+  right: 50px;
+  box-sizing: border-box;
+  top: 40px;
+  height: 80px;
+  z-index: 100;
+  border-radius: 80px;
+  -moz-border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -khtml-border-radius: 80px;
+  transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
+  -moz-transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
+  -webkit-transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
+  -o-transition: all 0.7s cubic-bezier(0.165, 0.85, 0.45, 1);
+  .box {
+    flex: 0 0 20%;
+    .logo {
+      font-weight: 800;
+      font-size: 30px;
+      color: #d90404;
+    }
+    .openMenu {
+      display: none;
+    }
+  }
+
+  nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    li {
+      margin: 0;
+      list-style: none;
+      margin-left: 25px;
+      font-weight: 600;
+      font-size: 12px;
+      a {
+        text-decoration: none;
+        color: $black;
+        &:hover {
+          color: $mainDark;
+        }
+      }
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &.current-menu-item {
+        a {
+          color: $mainDark;
+        }
+      }
+    }
+  }
+  li {
+    list-style: none;
+    margin-left: 25px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 0px 30px;
+    left: 0;
+    right: 0;
+    display: block;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    border-radius: 0;
+
+    nav {
+      display: block;
+      width: 100%;
+      width: auto;
+      height: 0;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s cubic-bezier(0.165, 0.85, 0.45, 1);
+      -moz-transition: opacity 0.35s cubic-bezier(0.165, 0.85, 0.45, 1);
+      -webkit-transition: opacity 0.35s cubic-bezier(0.165, 0.85, 0.45, 1);
+      -o-transition: opacity 0.35s cubic-bezier(0.165, 0.85, 0.45, 1);
+    }
+    .download {
+      display: none;
+    }
+    .box {
+      flex: 0 0 100%;
+      display: flex;
+      align-items: center;
+      padding: 8px 0;
+      justify-content: space-between;
+      .logo {
+        flex: 0 0 70%;
+      }
+      .openMenu {
+        display: block;
+        flex: 1;
+        // background-color: yellow;
+        .hamburguer {
+          position: relative;
+          display: block;
+          padding: 20px;
+          margin: 0 auto;
+          background-color: white;
+          margin-top: 0px;
+          width: 64px;
+          height: 64px;
+          line-height: 62px;
+          border: 1px solid $grey;
+          border-radius: 64px;
+          -moz-border-radius: 64px;
+          -webkit-border-radius: 64px;
+          -khtml-border-radius: 64px;
+          span {
+            height: 2px;
+            background-color: $black;
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            right: 25px;
+            margin-top: -1px;
+            transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -webkit-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+          }
+          &::before,
+          &::after {
+            content: " ";
+            position: absolute;
+            top: 22px;
+            left: 20px;
+            right: 20px;
+            height: 2px;
+            background: $black;
+            transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -webkit-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+          }
+          &::after {
+            top: auto;
+            bottom: 22px;
+          }
+        }
+      }
+    }
+
+    &.open {
+      height: 100vh;
+      nav {
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+        padding-top: 30px;
+        clear: both;
+        li {
+          display: block;
+          padding: 20px;
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+      .box {
+        .openMenu {
+          .hamburguer {
+            span {
+              left: 20px;
+              right: 20px;
+              transform: rotate(45deg);
+              -webkit-transform: rotate(45deg);
+              -moz-transform: rotate(45deg);
+              -o-transform: rotate(45deg);
+            }
+            &::before {
+              opacity: 0;
+            }
+            &::after {
+              bottom: 30px;
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
+              -moz-transform: rotate(-45deg);
+              -o-transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

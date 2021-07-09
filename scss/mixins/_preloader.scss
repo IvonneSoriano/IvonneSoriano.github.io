@@ -1,0 +1,54 @@
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 0;
+  display: none;
+  z-index: 999;
+  & > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loader {
+      font-weight: 800;
+      font-size: 36px;
+      background: chartreuse;
+      position: relative;
+      color: $main;
+      & > span {
+        position: absolute;
+        top: 0;
+        &.i {
+          left: 0;
+          animation: letterI 1s infinite;
+        }
+        &.v {
+          left: 15px;
+        }
+        &.y {
+          left: 40px;
+        }
+        &.point {
+          left: 65px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes letterI {
+  0% {
+    top: -20px;
+  }
+  50% {
+    top: 0%;
+  }
+  100% {
+    top: 20px;
+  }
+}
