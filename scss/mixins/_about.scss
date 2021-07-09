@@ -21,4 +21,12 @@
             }
         }
     }
+    @media (max-width: 992px) {
+        .info{
+            li{
+                flex: 0 0 100%;
+            
+            }
+        }
+      }
 }

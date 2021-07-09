@@ -98,7 +98,7 @@ function header(){
 
 
 function experience() {
-    const owl = $('.owl-carousel'); 
+    const owl = $('.experience .owl-carousel'); 
     $('.owl-carousel').owlCarousel({
         margin: 40,
         autoplay: false,

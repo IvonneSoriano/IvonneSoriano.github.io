@@ -120,6 +120,13 @@ a {
   font-size: 4.2vw;
   color: $black;
   font-weight: 700;
+  @media (max-width:768px) {
+    font-size: 34px;
+    &.h1{
+      font-size: 40px;
+    }
+    
+  }
 }
 .subtitle {
   line-height: 1.2;

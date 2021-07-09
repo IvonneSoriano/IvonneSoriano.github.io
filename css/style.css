@@ -297,6 +297,9 @@ header {
       flex: 0 0 50%; }
       .aboutMe .info li .title {
         color: #bf0404; }
+  @media (max-width: 992px) {
+    .aboutMe .info li {
+      flex: 0 0 100%; } }
 
 .experience {
   background-color: white;
@@ -344,6 +347,20 @@ header {
       justify-content: center; }
       .experience .nav-carousel button img {
         height: 15px; }
+  @media (max-width: 768px) {
+    .experience {
+      min-height: 70vh;
+      overflow: hidden; }
+      .experience .nav-carousel {
+        bottom: 50px;
+        right: 50%;
+        transform: translateX(50%);
+        top: unset; }
+        .experience .nav-carousel::before {
+          width: 60vw;
+          transform: translateX(85%);
+          right: 50%;
+          top: 50%; } }
 
 .education {
   background-color: white;
@@ -362,13 +379,10 @@ header {
         margin-bottom: 20px; }
       .education .owl-carousel .item > div .dates {
         font-size: 10px;
-        transform: translateY(-50%) rotate(90deg);
         display: inline-block;
-        top: 50%;
-        left: -25px;
         color: #bf0404;
         font-weight: 600;
-        position: absolute; }
+        position: relative; }
   .education .nav-carousel {
     display: flex;
     position: absolute;
@@ -391,6 +405,20 @@ header {
       justify-content: center; }
       .education .nav-carousel button img {
         height: 15px; }
+  @media (max-width: 768px) {
+    .education {
+      min-height: 60vh;
+      overflow: hidden; }
+      .education .nav-carousel {
+        bottom: 50px;
+        right: 50%;
+        transform: translateX(50%);
+        top: unset; }
+        .education .nav-carousel::before {
+          width: 60vw;
+          transform: translateX(85%);
+          right: 50%;
+          top: 50%; } }
 
 .skills {
   background-color: white;
@@ -440,7 +468,7 @@ header {
         .skills .lst-skills ul li p {
           border-bottom: 1px solid #d96277;
           width: 90%; }
-  @media (max-width: 600px) {
+  @media (max-width: 992px) {
     .skills {
       padding: 50px; }
       .skills .circles .item {
@@ -449,6 +477,13 @@ header {
           width: unset; }
           .skills .circles .item .text-center .c100 {
             margin: 0 auto; } }
+  @media (max-width: 768px) {
+    .skills {
+      padding-left: 8%; }
+      .skills .circles .item {
+        flex: 0 0 100%; }
+      .skills .lst-skills ul li {
+        flex: 0 0 100%; } }
 
 .portfolio {
   padding-left: 8%;
@@ -470,6 +505,7 @@ header {
         width: 275px;
         text-align: center; }
         .portfolio .row .item .info .img {
+          overflow: hidden;
           background-color: cadetblue;
           width: 100%;
           height: 290px;
@@ -499,7 +535,7 @@ header {
     .portfolio .row .item {
       flex: 0 0 100%; }
       .portfolio .row .item .info {
-        width: 100%; }
+        max-width: 315px; }
         .portfolio .row .item .info .img {
           background-color: transparent;
           margin-bottom: 10px; } }
@@ -650,6 +686,11 @@ a {
   font-size: 4.2vw;
   color: #262728;
   font-weight: 700; }
+  @media (max-width: 768px) {
+    .h-title {
+      font-size: 34px; }
+      .h-title.h1 {
+        font-size: 40px; } }
 
 .subtitle {
   line-height: 1.2;

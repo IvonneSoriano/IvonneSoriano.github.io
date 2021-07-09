@@ -56,4 +56,20 @@
       }
     }
   }
+  @media (max-width: 768px) {
+    min-height: 70vh;
+    overflow: hidden;
+    .nav-carousel {
+      bottom: 50px;
+      right: 50%;
+      transform: translateX(50%);
+      top: unset;
+      &::before {
+        width: 60vw;
+        transform: translateX(85%);
+        right: 50%;
+        top: 50%;
+      }
+    }
+  }
 }
