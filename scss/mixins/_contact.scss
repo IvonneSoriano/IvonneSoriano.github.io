@@ -1,0 +1,49 @@
+.contact {
+  padding-left: 8%;
+  padding-right: 8%;
+  background-color: white;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  min-height: 65vh;
+  form {
+    .control {
+      border: 1px solid $grey;
+      border-radius: 50px;
+      position: relative;
+      padding: 20px 30px;
+      margin-bottom: 40px;
+      position: relative;
+      .label {
+        position: absolute;
+        top: -10px;
+        font-size: 12px;
+        background: white;
+        padding: 0 8px;
+        left: 45px;
+      }
+      input,
+      textarea {
+        background-color: white;
+        width: 100%;
+        border: none;
+        outline: none !important;
+      }
+    }
+  }
+  @media (max-width: 1600px) {
+    form {
+      .control {
+        .label {
+          left: 35px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    form {
+        text-align: center;
+   
+    }
+  }
+}

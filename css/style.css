@@ -347,7 +347,7 @@ header {
       justify-content: center; }
       .experience .nav-carousel button img {
         height: 15px; }
-  @media (max-width: 768px) {
+  @media (max-width: 630px) {
     .experience {
       min-height: 70vh;
       overflow: hidden; }
@@ -405,7 +405,7 @@ header {
       justify-content: center; }
       .education .nav-carousel button img {
         height: 15px; }
-  @media (max-width: 768px) {
+  @media (max-width: 630px) {
     .education {
       min-height: 60vh;
       overflow: hidden; }
@@ -478,12 +478,10 @@ header {
           .skills .circles .item .text-center .c100 {
             margin: 0 auto; } }
   @media (max-width: 768px) {
-    .skills {
-      padding-left: 8%; }
-      .skills .circles .item {
-        flex: 0 0 100%; }
-      .skills .lst-skills ul li {
-        flex: 0 0 100%; } }
+    .skills .circles .item {
+      flex: 0 0 100%; }
+    .skills .lst-skills ul li {
+      flex: 0 0 100%; } }
 
 .portfolio {
   padding-left: 8%;
@@ -535,10 +533,48 @@ header {
     .portfolio .row .item {
       flex: 0 0 100%; }
       .portfolio .row .item .info {
+        margin: auto;
         max-width: 315px; }
         .portfolio .row .item .info .img {
           background-color: transparent;
           margin-bottom: 10px; } }
+  @media (max-width: 500px) {
+    .portfolio .row .item .info {
+      max-width: 255px; } }
+
+.contact {
+  padding-left: 8%;
+  padding-right: 8%;
+  background-color: white;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  min-height: 65vh; }
+  .contact form .control {
+    border: 1px solid #d9d9d9;
+    border-radius: 50px;
+    position: relative;
+    padding: 20px 30px;
+    margin-bottom: 40px;
+    position: relative; }
+    .contact form .control .label {
+      position: absolute;
+      top: -10px;
+      font-size: 12px;
+      background: white;
+      padding: 0 8px;
+      left: 45px; }
+    .contact form .control input,
+    .contact form .control textarea {
+      background-color: white;
+      width: 100%;
+      border: none;
+      outline: none !important; }
+  @media (max-width: 1600px) {
+    .contact form .control .label {
+      left: 35px; } }
+  @media (max-width: 768px) {
+    .contact form {
+      text-align: center; } }
 
 .networks {
   position: fixed;
@@ -581,6 +617,8 @@ header {
       width: 8%; } }
   @media (max-width: 992px) {
     .networks {
+      border-left: none;
+      border-top: 1px solid #d9d9d9;
       width: 100%;
       position: relative;
       height: 70px; }
@@ -642,9 +680,11 @@ a {
       background-size: contain;
       margin-top: 80px; } }
   @media (max-width: 768px) {
-    .mainPhoto img {
-      display: block;
-      max-width: 100%; } }
+    .mainPhoto {
+      height: 425px; }
+      .mainPhoto img {
+        display: block;
+        max-width: 100%; } }
 
 .main {
   background-color: white;

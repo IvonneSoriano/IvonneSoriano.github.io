@@ -16,6 +16,7 @@ FONT FAMILY
 @import "./mixins/education";
 @import "./mixins/skills";
 @import "./mixins/portfolio";
+@import "./mixins/contact";
 @import "./mixins/networks";
 
 * {
@@ -69,6 +70,7 @@ a {
     margin-top: 80px;
   }
   @media (max-width: 768px) {
+    height: 425px;
   img{
     display: block;
     max-width: 100%;

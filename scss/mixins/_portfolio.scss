@@ -80,11 +80,23 @@
       .item{
         flex: 0 0 100%;
         .info{
+          margin: auto;
           max-width: 315px;
           .img {
             background-color: transparent;
             margin-bottom: 10px;
           }
+        }
+      }
+    }
+  }
+
+  @media(max-width:500px){
+    .row{
+      .item{
+        .info{
+          max-width: 255px;
+         
         }
       }
     }
