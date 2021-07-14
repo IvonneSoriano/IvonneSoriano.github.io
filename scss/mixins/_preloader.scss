@@ -5,7 +5,7 @@
   display: none;
   z-index: 999;
   & > div {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -13,42 +13,65 @@
     background: $black;
     display: flex;
     align-items: center;
+    z-index: 999;
     justify-content: center;
     .loader {
       font-weight: 800;
       font-size: 36px;
-      background: chartreuse;
+      // background: chartreuse;
       position: relative;
       color: $main;
-      & > span {
-        position: absolute;
-        top: 0;
-        &.i {
-          left: 0;
-          animation: letterI 1s infinite;
-        }
-        &.v {
-          left: 15px;
-        }
-        &.y {
-          left: 40px;
-        }
-        &.point {
-          left: 65px;
-        }
+      p{
+        font-size: 40px;
+        transform: scale(0.5);
+        animation: scale-up-center 1s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
       }
     }
   }
+  &.active{
+    display: block;
+  }
 }
 
-@keyframes letterI {
+
+@-webkit-keyframes scale-down-center {
   0% {
-    top: -20px;
-  }
-  50% {
-    top: 0%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    top: 20px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }

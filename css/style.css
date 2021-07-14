@@ -9,7 +9,7 @@ FONT FAMILY
   display: none;
   z-index: 999; }
   .preloader > div {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -17,33 +17,51 @@ FONT FAMILY
     background: #262728;
     display: flex;
     align-items: center;
+    z-index: 999;
     justify-content: center; }
     .preloader > div .loader {
       font-weight: 800;
       font-size: 36px;
-      background: chartreuse;
       position: relative;
       color: #bf0404; }
-      .preloader > div .loader > span {
-        position: absolute;
-        top: 0; }
-        .preloader > div .loader > span.i {
-          left: 0;
-          animation: letterI 1s infinite; }
-        .preloader > div .loader > span.v {
-          left: 15px; }
-        .preloader > div .loader > span.y {
-          left: 40px; }
-        .preloader > div .loader > span.point {
-          left: 65px; }
+      .preloader > div .loader p {
+        font-size: 40px;
+        transform: scale(0.5);
+        animation: scale-up-center 1s cubic-bezier(0.39, 0.575, 0.565, 1) infinite; }
+  .preloader.active {
+    display: block; }
 
-@keyframes letterI {
+@-webkit-keyframes scale-down-center {
   0% {
-    top: -20px; }
-  50% {
-    top: 0%; }
+    -webkit-transform: scale(1);
+    transform: scale(1); }
   100% {
-    top: 20px; } }
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); } }
+
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); } }
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
 header {
   background: white;
