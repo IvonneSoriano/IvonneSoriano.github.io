@@ -19,16 +19,25 @@
         //    background-color: #aaa;
         width: 275px;
         text-align: center;
-        .img {
-          overflow: hidden;
-          background-color: cadetblue;
-          width: 100%;
-          height: 290px;
-          margin: 0 0 20px;
-          img{
-           height:  100%;
+        a{
+          color: $mainDark;
+          .img {
+            overflow: hidden;
+            background-color: $mainLight;
+            width: 100%;
+            height: 290px;
+            margin: 0 0 20px;
+            img{
+             height:  100%;
+            }
+          }
+          &:hover{
+            p{
+              text-decoration: underline;
+            }
           }
         }
+      
       }
     }
   }
