@@ -194,7 +194,7 @@ function contact() {
         //hide the preloader
         setTimeout(function () {
             $('.preloader').slideUp();
-        }, 1000)
+        }, 500)
     }
 }
 
