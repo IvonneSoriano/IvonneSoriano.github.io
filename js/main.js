@@ -32,13 +32,16 @@ function header() {
     });
 
     $('header .top-menu').on('click', 'a', function () {
+       
         var link = $(this).attr('href');
         if (link.indexOf('#') == 0) {
-
+            $("body").toggleClass("fixed");
+            $("header").toggleClass("open");
             $('body, html').animate({
                 scrollTop: $(link).offset().top - 115
             }, 400);
             if ($('header').hasClass('active')) {
+               
                 $('.menu-btn').trigger('click');
             }
             // }

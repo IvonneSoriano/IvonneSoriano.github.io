@@ -202,6 +202,7 @@ header {
           padding-top: 30px;
           clear: both; }
           header.open nav li {
+            margin: 0;
             display: block;
             padding: 20px; }
             header.open nav li a {
